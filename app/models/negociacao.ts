@@ -5,25 +5,19 @@ export class Negociacao {
     //o this esta sendo utilizado para se referenciar a classe "pai"
     constructor(
         private _data: Date, 
-        private _quantidade: number, 
-        private _valor: number
+        public readonly quantidade: number, 
+        public readonly valor: number
     ) {}
 
     //o get consegue acessar os atributos privados
-    get data(): Date {
-        return this._data;
-    }
-
-    get quantidade(): number {
-        return this._quantidade;
-    }
-
-    get valor(): number {
-        return this._valor;
-    }
-
+    //o get não pode ter o mesmo nome da propriedade (propriedade = o que o constructor recebe)
     get volume(): number {
-        return this._quantidade * this._valor;
+        return this.quantidade * this.valor;
+    }
+
+    get data(): Date {
+        const data = new Date(this._data.getTime());
+        return data;
     }
 
 }
