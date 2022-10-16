@@ -1,4 +1,4 @@
-# Negociação na bolsa de valores
+# Negociação da bolsa de valores
 
 Aplicação realizada em conjunto com o professor Flavio Henrique da Alura, para fixar o conhecimento em TypeScript.
 
